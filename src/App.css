@@ -1,0 +1,119 @@
+.App {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  box-sizing: border-box;
+  background:
+    radial-gradient(circle at top left, rgba(129, 140, 248, 0.2), transparent 32rem),
+    #f4f6fb;
+}
+
+.calculator {
+  width: min(100%, 420px);
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  border: 1px solid #e5e9f2;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 20px 50px rgba(31, 41, 55, 0.1);
+  box-sizing: border-box;
+}
+
+.calculator label {
+  margin: 0 0 8px;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.calculator input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px 14px;
+  border: 1px solid #d7deea;
+  border-radius: 10px;
+  outline: none;
+  background: #fbfcff;
+  color: #172033;
+  font: inherit;
+  box-sizing: border-box;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.calculator input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 2px;
+}
+
+.calculator-buttons button {
+  padding: 11px 14px;
+  border: 0;
+  border-radius: 10px;
+  background: #eef0ff;
+  color: #4548c7;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.calculator-buttons button:hover {
+  transform: translateY(-1px);
+  background: #e0e3ff;
+}
+
+.calculator-buttons button:active {
+  transform: translateY(0);
+}
+
+.calculator-result {
+  margin-top: 24px;
+  padding: 18px;
+  border-radius: 12px;
+  background: #f7f8fc;
+  text-align: center;
+}
+
+.calculator-result span {
+  color: #6b7280;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.calculator-result button {
+  color: #1b3978;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 4px;
+}
+.calculator-result button:hover {
+  transform: translateY(-1px);
+  background: #3843a2;
+}
+
+.calculator-result h2 {
+  margin: 6px 0 0;
+  color: #252a61;
+  font-size: 32px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 480px) {
+  .calculator {
+    padding: 24px;
+  }
+}
