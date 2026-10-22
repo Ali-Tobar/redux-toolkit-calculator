@@ -96,15 +96,14 @@ The calculation lifecycle follows a strict one-way data flow:
 
 ```mermaid
 flowchart TD
-    A[User enters numbers in inputs] --> B[User clicks operation button e.g., Sum]
-    B --> C[App dispatches action: add\({ first, second }\)]
-    C --> D[calcSlice reducer processes payload]
-    D --> E[Immer safely updates state.result]
-    E --> F[Redux Store updates single source of truth]
-    F --> G[useSelector triggers App re-render]
-    G --> H[UI displays formatted result]
+    A["User enters numbers in inputs"] --> B["User clicks operation button (e.g. Sum)"]
+    B --> C["App dispatches action: add({ first, second })"]
+    C --> D["calcSlice reducer processes payload"]
+    D --> E["Immer safely updates state.result"]
+    E --> F["Redux Store updates single source of truth"]
+    F --> G["useSelector triggers App re-render"]
+    G --> H["UI displays formatted result"]
 ```
-
 ---
 
 ## 📂 Project Structure
